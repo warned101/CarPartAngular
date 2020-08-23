@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    Enter UserID<input [(ngModel)] = userid name = 'nm'>
+    <button (click)='userIdData()'>Submit</button>
+  </form>
+  <table>
+    <tr>
+      <th> postID </th>
+      <th> ID </th>
+      <th> Title </th>
+      <th>Body</th>
+    </tr>
+
+    <tr *ngFor = 'let c of usrData'>
+    <td> {{userid}} </td>
+    <td> {{c.id}} </td>
+    <td> {{c.title}} </td>
+    <td> {{c.body}} </td>
+    </tr>
+
+  </table>
+  <app-add-carpart></app-add-carpart>
+  <app-view-carparts></app-view-carparts>
+</body>
+</html>

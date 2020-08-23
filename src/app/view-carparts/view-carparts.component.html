@@ -1,0 +1,20 @@
+<p>view-carparts works!</p>
+
+
+<button (click)="viewCarParts()">View CarParts</button>
+
+<table *ngIf="data" border="1">
+        <tr><th>PartNo</th>
+        <th>partName</th>
+        <th>carModel</th>
+        <th>price</th>
+        <th>quantity</th>
+    </tr>
+    <tr *ngFor="let cp of data">
+        <td>{{cp.partNo}}</td>
+        <td>{{cp.name}}</td>
+        <td>{{cp.carModel}}</td>
+        <td>{{cp.price}}</td>
+        <td>{{cp.quantity}}</td>
+    </tr>
+</table>
